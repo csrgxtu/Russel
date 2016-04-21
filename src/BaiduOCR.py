@@ -9,6 +9,7 @@
 import sys, urllib, urllib2, json
 import base64
 import ast
+from bs4 import BeautifulSoup
 from Utility import loadSeasons, appendstr2fileutf8
 
 url = 'http://apis.baidu.com/idl_baidu/baiduocrpay/idlocrpaid'
@@ -39,6 +40,10 @@ for name in names:
     resp = urllib2.urlopen(req)
     content = resp.read()
     if(content):
+        if bool(BeautifulSoup(content, "html.parser").find()):
+            print "Got Html, Not Right"
+            break
+
         print content
         if len(ast.literal_eval(content)['retData']) == 0:
             res = name + ',' + ''
