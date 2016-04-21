@@ -25,7 +25,7 @@ data['imagetype'] = "1"
 # for each name, build a csv row and store it
 names = loadSeasons('./names.txt')
 for name in names:
-    time.sleep(1)
+    time.sleep(2)
     file_object = open('/bookdata/liqiang/Downloads/books/' + name, 'rb')
     try:
          tmp = file_object.read( )
