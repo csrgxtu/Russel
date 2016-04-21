@@ -9,7 +9,7 @@
 import sys, urllib, urllib2, json
 import base64
 import ast
-from Utility import loadSeasons
+from Utility import loadSeasons, appendstr2fileutf8
 
 url = 'http://apis.baidu.com/idl_baidu/baiduocrpay/idlocrpaid'
 data = {}
