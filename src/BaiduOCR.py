@@ -41,6 +41,7 @@ for name in names:
     content = resp.read()
     if(content):
         if bool(BeautifulSoup(content, "html.parser").find()):
+            print content
             print "Got Html, Not Right"
             break
 
