@@ -45,6 +45,7 @@ for name in names:
             print content
             print "Got Html, Not Right"
             time.sleep(30)
+            continue
             # break
 
         print content
