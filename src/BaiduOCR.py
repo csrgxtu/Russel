@@ -40,7 +40,12 @@ for name in names:
     content = resp.read()
     if(content):
         print content
-        title = ast.literal_eval(content)['retData'][0]['word']
-        print title
-        res = name + ',' + title
-        appendstr2fileutf8(res, './result.csv')
+        if len(ast.literal_eval(content)['retData']) == 0:
+            res = name + ',' + ''
+            appendstr2fileutf8(res, './result.csv')
+            # continue
+        else:
+            title = ast.literal_eval(content)['retData'][0]['word']
+            print title
+            res = name + ',' + title
+            appendstr2fileutf8(res, './result.csv')
