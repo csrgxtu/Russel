@@ -16,7 +16,7 @@ from Utility import loadSeasons, appendstr2fileutf8
 url = 'http://apis.baidu.com/idl_baidu/baiduocrpay/idlocrpaid'
 data = {}
 data['fromdevice'] = "pc"
-data['clientip'] = "192.168.100.2"
+data['clientip'] = "192.168.100.3"
 data['detecttype'] = "LocateRecognize"
 data['languagetype'] = "CHN_ENG"
 data['imagetype'] = "1"
