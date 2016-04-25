@@ -11,4 +11,4 @@ from Utility import loadSeasons
 lines = loadSeasons('./dest.csv')
 
 for line in lines:
-    print '<img src="/imgs/' + line.split(',')[0] + '">' +  line.split(',')[1] + '</img><input type="checkbox" onclick="check(this)"><br/>'
+    print '<img src="http://192.168.100.2:8082/imgs/' + line.split(',')[0] + '">' +  line.split(',')[1] + '</img><input type="checkbox" onclick="check(this)"><input type="checkbox" onclick="remove(this)"><br/>'
